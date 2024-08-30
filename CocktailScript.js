@@ -5,19 +5,6 @@
 
 
 window.onload=function(){
-
-    apiTalk();
-    //let test = drinks.find(drinks => drinks.drinkId === '15300')
-    //console.log('outside',test);
-    //document.write(drinks);
-    //for (let i = 0; i < drinks.length; i++){ console.log(drinks[i].drinkName)}
-
-    /*const element = document.createElement('div');
-    element.id = 'drink';
-    element.innerTex = 'test';
-    document.body.appendChild(element);*/
-}
-function apiTalk(){
     const apiDrinks = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink';
     let cocktails = [];
     fetch(apiDrinks)
@@ -37,14 +24,54 @@ function apiTalk(){
                 //this is a scope issue it doesn't have access to the info
 
             }
-            console.log('In the fetch',cocktails[0].drinkName); //it does not know how to print as string cant use +
+
+            loadImages(cocktails);
+          //  console.log('In the fetch',cocktails[0].drinkName); //it does not know how to print as string cant use +
             //return cocktails;
            // console.log(cocktails[1]); //figure out what this is actually doing and what you are returning
         })
         .catch(error => {
             console.error('Error:', error);
         });
-    console.log(cocktails);
-    /*This fetches the entire list figure out how to parse it and send each to html elements*/
-    return cocktails;
+    //console.log(cocktails);
+
+
+}
+
+// Function to create and append the list items
+function loadImages(imageArray) {
+    // Get the list element from the HTML.
+    const list = document.getElementById('imageList');
+
+    // Loop through each image in the array.
+    imageArray.forEach((image, index) => {
+        // Create a new list item for each image.
+        const listItem = document.createElement('li');
+        // Set a key attribute for the list item using the image title, converted to lowercase.
+        listItem.setAttribute('key', image.drinkName);
+
+        // Create a div to hold the image.
+        const imageDiv = document.createElement('div');
+        // Add a class to the div for styling purposes.
+        imageDiv.className = 'imageImage';
+
+        // Create an img element for the image and set attributes.
+        const img = document.createElement('img');
+        img.src = image.drinkPic + '/preview';
+        img.alt = image.drinkName;
+
+        // Create a h3 element for the image title and set attributes.
+        const title = document.createElement('h3');
+        title.className = 'imageTitle';
+        title.textContent = image.title;
+
+        // Append the img element to the imageDiv.
+        imageDiv.appendChild(img);
+        // Append the imageDiv and title to the listItem.
+        listItem.appendChild(imageDiv);
+        listItem.appendChild(title);
+
+        // Append the listItem to the list.
+        list.appendChild(listItem);
+    });
 }
