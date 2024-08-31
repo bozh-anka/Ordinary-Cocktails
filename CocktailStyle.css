@@ -28,7 +28,7 @@ img {
 img:hover {
     transform: scale(1.2);
     opacity: 0.8;
-    border: 5px solid #bbcaed;
+
 }
 
 a {
@@ -63,5 +63,5 @@ header {
 }
 
 .imageTitle {
-    margin: .4em 0 0;
+    margin: .6em 0 0;
 }

@@ -49,7 +49,7 @@ function loadImages(imageArray) {
         const listItem = document.createElement('li');
         // Set a key attribute for the list item using the image title, converted to lowercase.
         listItem.setAttribute('key', image.drinkName);
-
+        listItem.setAttribute('id', image.drinkId);
         // Create a div to hold the image.
         const imageDiv = document.createElement('div');
         // Add a class to the div for styling purposes.
@@ -63,7 +63,7 @@ function loadImages(imageArray) {
         // Create a h3 element for the image title and set attributes.
         const title = document.createElement('h3');
         title.className = 'imageTitle';
-        title.textContent = image.title;
+        title.textContent = image.drinkName;
 
         // Append the img element to the imageDiv.
         imageDiv.appendChild(img);
@@ -73,5 +73,12 @@ function loadImages(imageArray) {
 
         // Append the listItem to the list.
         list.appendChild(listItem);
+
+        //clicking image
+        document.getElementById(image.drinkId).onclick = function() {
+            console.log('clicked');
+        };
     });
+
 }
+
