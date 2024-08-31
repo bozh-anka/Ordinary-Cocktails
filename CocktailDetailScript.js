@@ -52,7 +52,7 @@ window.onload = function () {
                     ingrList.appendChild(ingrI);
                 }
                 else {
-                    break;
+                    break; //No more ingredients
                 }
             }
     }).catch(error => {
