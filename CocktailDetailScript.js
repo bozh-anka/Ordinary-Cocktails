@@ -11,11 +11,10 @@ window.onload = function () {
             //fetching container
             const contr = document.getElementById('div');
 
-            //Creating title
-            const drinkName = document.createElement('h1');
-            drinkName.className = 'drinkName';
+            //Filling in the title
+            const drinkName = document.getElementById('title')
             drinkName.textContent = data.drinks[0].strDrink;
-            contr.appendChild(drinkName);
+
 
             //Displaying image
             const imgD = document.createElement('div');
@@ -34,6 +33,8 @@ window.onload = function () {
                 <ul id = 'instructions'></ul>
              </div>
             */
+
+            //Populating ingredients list
             const ingrList = document.getElementById('ingredients');
             for (let i = 1; i < 16; i ++) {
                 //console.log(eval(`data.drinks[0].strIngredient${i}`));
@@ -55,6 +56,15 @@ window.onload = function () {
                     break; //No more ingredients
                 }
             }
+
+
+            const catL = document.getElementById('category');
+            catL.textContent = data.drinks[0].strCategory;
+            const glass = document.getElementById('glass');
+            glass.textContent = data.drinks[0].strGlass;
+
+            const instructions = document.getElementById('instructions');
+            instructions.textContent = data.drinks[0].strInstructions;
     }).catch(error => {
         console.log('Error',error);
     })}
