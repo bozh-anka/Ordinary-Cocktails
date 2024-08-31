@@ -76,7 +76,8 @@ function loadImages(imageArray) {
 
         //clicking image
         document.getElementById(image.drinkId).onclick = function() {
-            console.log('clicked');
+            localStorage.setItem('drinkId', image.drinkId);
+            location.href = "CocktailDetails.html";
         };
     });
 
