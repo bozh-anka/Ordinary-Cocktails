@@ -1,8 +1,8 @@
 body {
+    margin: 0;
     padding: 0;
     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23E3B882FF" stroke="%23452A0FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
-    min-height: 100vh;
-    justify-content: center;
+
     background-color: #e3b882;
     opacity: 1;
     background-image: radial-gradient(#592618 1px, #e3b882 1px);
@@ -11,39 +11,181 @@ body {
     font-weight: bold;
 }
 
-h1 {
-    font-size: 4em;
-    text-align: center;
-    font-family: "Love Ya Like A Sister", cursive;
+/* width */
+::-webkit-scrollbar {
+    width: 1em;
+}
+.highlight{
+    background: rgba(250, 176, 131, 0.56);
+    width: fit-content;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #fdd8bb;
+    border-radius: 2em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #452a0f;
+    border-radius: 10px;
+}
+
+.container{
+    scale: 80%;
+    height: 20em;
+    justify-content: center;
+
 
 }
-.txt{
-    justify-content: left;
-    float: left;
+h2 {
+    position: relative;
+    margin-top: 0;
+    font-size: 3em;
+    text-align: center;
+    font-family: "Love Ya Like A Sister", cursive;
+    z-index: 3;
+}
+.ingr{
+
+    width: fit-content;
+    padding-left: 7em;
+    padding-right: 1em;
+    transform: rotate(6deg);
+    position: absolute;
+    left: 51%;
+    top: 0em;
+    float: inherit;
+
+    z-index: 3;
+
+}
+.instr{
+    box-shadow: #452a0f 2px 2px 2px;
     background-color: #fff;
     background-image:
             linear-gradient(90deg, transparent 79px, #9f3a3a 79px, #d55b5b 81px, transparent 81px),
             linear-gradient(#ade1f6 .1em, transparent .1em);
     background-size: 100% 1.2em;
-    width: 50%;
-    padding-left: 4em;
+    width: 30em;
+
+    padding-left: 5em;
+
+    transform: rotate(4deg);
+    position: absolute;
+    top: 28em;
+    left: 30%;
+    display: flow-root;
+    z-index: 0;
 }
+.imageDrink{
+    transition: all .2s ease-in-out;
+    border: 0.2em solid #dcc8c0;
+    border-radius: 8px;
+    width: fit-content;
+    transform: rotate(-6deg);
+    position: absolute;
+    padding: 1em;
+    background-color: white;
+    z-index: 1;
+    top: -12em;
+    left: 15%;
+    scale: 50%;
+    box-shadow: #452a0f 2px 2px 2px ;
+}
+
 img{
-    float: right;
-    scale: 60%;
+    border: 0.3em inset #dcc8c0;
+    background-image: url("https://loading.io/assets/mod/spinner/spinner/lg.gif");
 }
-p{
-    float: right;
-    width: 50%;
-}
+
 ul {
+    background-color: #fff;
+    background-image:
+            linear-gradient(90deg, transparent 79px, #9f3a3a 79px, #d55b5b 81px, transparent 81px),
+            linear-gradient(#ade1f6 .1em, transparent .1em);
+    background-size: 100% 1.2em;
     max-width: fit-content;
     justify-content: left;
     float: left;
+    box-shadow: #452a0f 0px 2px 2px;
 }
-
+.t{
+    text-decoration:solid underline 0.1em;
+    font-style: italic;
+    text-underline-offset: 0.2em;
+    max-width: fit-content;
+    padding-top: 0;
+}
+.bg{
+    transition: all 1s ease-in-out;
+    height: fit-content;
+    border: none;
+    scale: 500%;
+    transform: rotate(90deg);
+    position: relative;
+    top: 95%;
+    left:45%;
+    z-index: -2;
+}
 .top{
+    text-decoration:underline;
+    text-underline-offset: 0.2em;
     list-style-type: none;
     font-size: 1.5em;
-    margin: 0;
+    margin-top: 0;
     padding: 0;}
+@media (max-width: 1200px) {
+    body {
+        margin-left: -12em;
+        justify-content: center;
+    }
+    .imageDrink{
+        left: 5%;
+    }
+    .ingr{
+        left: 47%;
+        top:10%;
+    }
+    .instr{
+        left:25%;
+        top: 155%;
+    }
+    .imageDrink:hover{
+        z-index: 5;
+    }
+    .bg{
+        width: 6%;
+        scale: 600%;
+        top: 95%;
+        left:45%;
+
+    }
+}
+@media (max-width: 800px) {
+    body {
+        margin-left: -5%;
+        justify-content: center;
+    }
+    .imageDrink{
+        left: 10%;
+        scale: 35%;
+        top: -25%;
+        transform: rotate(-8deg);
+    }
+    .imageDrink:hover{
+        z-index: 5;
+    }
+    .ingr{
+        position: relative;
+        left: -15%;
+        top:0%;
+    }
+    .instr{
+        left: -5%;
+    }
+    .bg{
+
+        scale: 300%;
+    }
+}

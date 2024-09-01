@@ -12,15 +12,19 @@ window.onload = function () {
             const contr = document.getElementById('div');
 
             //Filling in the title
-            const drinkName = document.getElementById('title')
-            drinkName.textContent = data.drinks[0].strDrink;
+
 
 
             //Displaying image
             const imgD = document.createElement('div');
-            const drinkImg = document.createElement('img');
+            imgD.className = 'imageDrink';
+            const drinkImg = document.getElementById('img');
             drinkImg.src = data.drinks[0].strDrinkThumb ;
             drinkImg.alt = data.drinks[0].strDrink; //alt text
+            drinkImg.className = 'img';
+            const drinkName = document.getElementById('label');
+            drinkName.textContent = data.drinks[0].strDrink;
+            imgD.appendChild(drinkName);
             imgD.appendChild(drinkImg);
             contr.appendChild(imgD);
 
@@ -64,7 +68,10 @@ window.onload = function () {
             glass.textContent += data.drinks[0].strGlass;
 
             const instructions = document.getElementById('instructions');
-            instructions.textContent += ' ' + data.drinks[0].strInstructions;
+            if (data.drinks[0].strInstructions === null || data.drinks[0].strInstructions === "") {
+                instructions.textContent += 'Mix!';
+            } else {
+            instructions.textContent += ' ' + data.drinks[0].strInstructions;}
     }).catch(error => {
         console.log('Error',error);
     })}
