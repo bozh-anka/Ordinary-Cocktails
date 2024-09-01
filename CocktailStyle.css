@@ -61,7 +61,14 @@ header {
     font-weight: 500;
 
 }
+.load{
+    scale: 90%;
+    opacity: 50%;
+    justify-content: center;
+    margin-left: 25%;
+    border-style: none;
 
+}
 .container {
     width: 100%;
     max-width: 1024px;
@@ -104,10 +111,21 @@ li:hover {
     opacity: 0.8;
     border: 0.5em solid #452a0f;
 }
+@media (max-width: 1090px) {
+    .load{
+        scale: 70%;
 
-@media (max-width: 800px) {
+    }
+}
+@media (max-width: 1000px) {
+    .load{
+        scale: 60%;
+        margin-left: 15%;
+    }
+}
+@media (max-width: 600px) {
     body{
-        margin: -1em;
+        margin: -2em;
         justify-content: center;
     }
     .images {
@@ -115,5 +133,9 @@ li:hover {
     }
     h1{
         margin: 0;
+    }
+    .load{
+        scale: 50%;
+        margin-left: 0;
     }
 }

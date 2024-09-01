@@ -88,12 +88,14 @@ function loadImages(imageArray) {
         // Append the listItem to the list.
         list.appendChild(listItem);
 
-
         //clicking image
         document.getElementById(image.drinkId).onclick = function() {
             localStorage.setItem('drinkId', image.drinkId);
             location.href = "CocktailDetails.html";
         };
+
+        let load = document.getElementById('loading');
+        load.style.visibility = 'hidden';
     });
 
 }
