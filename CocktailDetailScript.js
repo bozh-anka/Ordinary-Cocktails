@@ -43,7 +43,7 @@ window.onload = function () {
 
                     // create list item that has measurement and ingredient together
                     const ingrI = document.createElement('li');
-                    ingrI.textContent = eval(`data.drinks[0].strMeasure${i}`) + " " + eval(`data.drinks[0].strIngredient${i}`);
+                    ingrI.textContent = eval(`data.drinks[0].strMeasure${i}`) + "      " + eval(`data.drinks[0].strIngredient${i}`);
                     ingrList.appendChild(ingrI);
                 } else if (eval(`data.drinks[0].strMeasure${i}`) == null && eval(`data.drinks[0].strIngredient${i}`) !== null  ){
 
@@ -59,12 +59,12 @@ window.onload = function () {
 
 
             const catL = document.getElementById('category');
-            catL.textContent = data.drinks[0].strCategory;
+            catL.textContent += data.drinks[0].strCategory;
             const glass = document.getElementById('glass');
-            glass.textContent = data.drinks[0].strGlass;
+            glass.textContent += data.drinks[0].strGlass;
 
             const instructions = document.getElementById('instructions');
-            instructions.textContent = data.drinks[0].strInstructions;
+            instructions.textContent += ' ' + data.drinks[0].strInstructions;
     }).catch(error => {
         console.log('Error',error);
     })}

@@ -1,0 +1,49 @@
+body {
+    padding: 0;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23E3B882FF" stroke="%23452A0FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+    min-height: 100vh;
+    justify-content: center;
+    background-color: #e3b882;
+    opacity: 1;
+    background-image: radial-gradient(#592618 1px, #e3b882 1px);
+    background-size: 20px 20px;
+    font-family: "Rock Salt", cursive;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+    font-family: "Love Ya Like A Sister", cursive;
+
+}
+.txt{
+    justify-content: left;
+    float: left;
+    background-color: #fff;
+    background-image:
+            linear-gradient(90deg, transparent 79px, #9f3a3a 79px, #d55b5b 81px, transparent 81px),
+            linear-gradient(#ade1f6 .1em, transparent .1em);
+    background-size: 100% 1.2em;
+    width: 50%;
+    padding-left: 4em;
+}
+img{
+    float: right;
+    scale: 60%;
+}
+p{
+    float: right;
+    width: 50%;
+}
+ul {
+    max-width: fit-content;
+    justify-content: left;
+    float: left;
+}
+
+.top{
+    list-style-type: none;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;}

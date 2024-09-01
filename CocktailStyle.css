@@ -1,8 +1,23 @@
 
+/* width */
+::-webkit-scrollbar {
+    width: 1em;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #fdd8bb;
+    border-radius: 2em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #452a0f;
+    border-radius: 10px;
+}
 body {
     padding: 0;
-    width: 100%;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23E3B882FF" stroke="%23452A0FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
     min-height: 100vh;
     justify-content: center;
     background-color: #e3b882;
@@ -72,7 +87,7 @@ header {
     transform: rotate(-5deg);
     color:black;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1.08em;
 }
 
 li {
@@ -85,8 +100,8 @@ li {
 }
 
 li:hover {
-    transform: scale(1.5);
     opacity: 0.8;
+    border: 0.5em solid #452a0f;
 }
 
 @media (max-width: 800px) {
