@@ -7,6 +7,10 @@
 window.onload=function(){
     const apiDrinks = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink';
     let cocktails = [];
+
+
+
+
     fetch(apiDrinks)
         .then(response =>
         response.json())
@@ -37,6 +41,13 @@ window.onload=function(){
 
 
 }
+function randomnumber(index) {
+    let num = Math.random(index) *(3 - - 3 +1);
+    if (index % 5 === 0) {
+        num = -Math.abs(num);
+    }
+    return num;
+}
 
 // Function to create and append the list items
 function loadImages(imageArray) {
@@ -65,14 +76,18 @@ function loadImages(imageArray) {
         title.className = 'imageTitle';
         title.textContent = image.drinkName;
 
+        let number = randomnumber(index);
+        //title.style.transform = `rotate(${number}deg)`;
+
         // Append the img element to the imageDiv.
         imageDiv.appendChild(img);
         // Append the imageDiv and title to the listItem.
         listItem.appendChild(imageDiv);
         listItem.appendChild(title);
-
+        listItem.style.transform = `rotate(${number}deg)`
         // Append the listItem to the list.
         list.appendChild(listItem);
+
 
         //clicking image
         document.getElementById(image.drinkId).onclick = function() {

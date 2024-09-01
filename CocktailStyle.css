@@ -1,21 +1,27 @@
-* {
 
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: large;
-}
 
 body {
     padding: 0;
     width: 100%;
     min-height: 100vh;
     justify-content: center;
-    background: #d06ea4;
-    color: #ac2f5b;
+    background-color: #e3b882;
+    opacity: 1;
+    background-image: radial-gradient(#592618 1px, #e3b882 1px);
+    background-size: 20px 20px;
 }
 
 h1 {
-    font-size: xxx-large;
+    margin-top: 0;
+    margin-right: 0.8em;
+    text-align: center;
+    font-optical-sizing: auto;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-size: 4em;
+    color: #272424;
+    background-color: white;
+    justify-content: center;
+
 }
 
 img {
@@ -23,12 +29,7 @@ img {
     height: auto;
     transition: all .2s ease-in-out;
     opacity: 1;
-}
-
-img:hover {
-    transform: scale(1.2);
-    opacity: 0.8;
-
+    border: 0.1em solid #dcc8c0;
 }
 
 a {
@@ -43,7 +44,7 @@ header {
     margin-bottom: .5em;
     font-size: 1em;
     font-weight: 500;
-    margin: 0;
+
 }
 
 .container {
@@ -55,13 +56,48 @@ header {
 
 .images {
     list-style: none;
-    padding: 0;
+    padding: 0.3em;
     margin: 1em;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 3em;
+
+
 }
 
 .imageTitle {
     margin: .6em 0 0;
+    font-family: "Shadows Into Light", cursive;
+    text-align: center;
+    transform: rotate(-5deg);
+    color:black;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+li {
+    background-color: white;
+    justify-content: center;
+    padding: 0.4em;
+    border: 0.2em solid #dcc8c0;
+    max-width: fit-content;
+
+}
+
+li:hover {
+    transform: scale(1.5);
+    opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+    body{
+        margin: -1em;
+        justify-content: center;
+    }
+    .images {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    h1{
+        margin: 0;
+    }
 }
