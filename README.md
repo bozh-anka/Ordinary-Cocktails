@@ -11,7 +11,12 @@ The project already included plenty of new things for me to learn, such as talki
 The starting page is the file CocktailList.html, its script is CocktailScript.js and the stylesheet is CocktailStyle.css
 The second page, to which users get by selecting a cocktail from the list, is CocktailDetails.html its script is CocktailDetailScript.js and its stylesheet is DetailsStyle.css.
 
+### Image and Background Sources 
 
+The [API](https://www.thecocktaildb.com/).
+  - [Ordinary Drink filter](https://www.thecocktaildb.com/api/json/
+v1/1/filter.php?c=Ordinary_Drink) and [Search by ID](www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007) were used specifically
+ 
 The starting page's loading icon was sourced from [here](https://usagif.com/)
 The detail's page loading gif is from [here](https://superstorefinder.net/support/knowledgebase/customizing-loading-icons/)
 
