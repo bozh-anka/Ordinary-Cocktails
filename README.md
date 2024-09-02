@@ -14,8 +14,7 @@ The second page, to which users get by selecting a cocktail from the list, is Co
 ### Image and Background Sources 
 
 The [API](https://www.thecocktaildb.com/).
-  - [Ordinary Drink filter](https://www.thecocktaildb.com/api/json/
-v1/1/filter.php?c=Ordinary_Drink) and [Search by ID](www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007) were used specifically
+  - [Ordinary Drink filter](https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink) and [Search by ID](www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007) were used specifically
  
 The starting page's loading icon was sourced from [here](https://usagif.com/)
 The detail's page loading gif is from [here](https://superstorefinder.net/support/knowledgebase/customizing-loading-icons/)
