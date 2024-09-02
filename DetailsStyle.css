@@ -1,15 +1,4 @@
-body {
-    margin: 0;
-    padding: 0;
-    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23E3B882FF" stroke="%23452A0FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
-
-    background-color: #e3b882;
-    opacity: 1;
-    background-image: radial-gradient(#592618 1px, #e3b882 1px);
-    background-size: 20px 20px;
-    font-family: "Rock Salt", cursive;
-    font-weight: bold;
-}
+/* SCROLLBAR EDITS */
 
 /* width */
 ::-webkit-scrollbar {
@@ -31,13 +20,25 @@ body {
     border-radius: 10px;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23E3B882FF" stroke="%23452A0FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+    background-color: #e3b882;
+    opacity: 1;
+    background-image: radial-gradient(#592618 1px, #e3b882 1px);
+    background-size: 20px 20px;
+    font-family: "Rock Salt", cursive;
+    font-weight: bold;
+}
+
+/* view control */
 .container{
     scale: 80%;
     height: 20em;
     justify-content: center;
-
-
 }
+
 h2 {
     position: relative;
     margin-top: 0;
@@ -46,8 +47,8 @@ h2 {
     font-family: "Love Ya Like A Sister", cursive;
     z-index: 3;
 }
-.ingr{
 
+.ingr{
     width: fit-content;
     padding-left: 7em;
     padding-right: 1em;
@@ -56,10 +57,9 @@ h2 {
     left: 51%;
     top: 0em;
     float: inherit;
-
     z-index: 3;
-
 }
+
 .instr{
     box-shadow: #452a0f 2px 2px 2px;
     background-color: #fff;
@@ -68,9 +68,7 @@ h2 {
             linear-gradient(#ade1f6 .1em, transparent .1em);
     background-size: 100% 1.2em;
     width: 30em;
-
     padding-left: 5em;
-
     transform: rotate(4deg);
     position: absolute;
     top: 28em;
@@ -78,8 +76,8 @@ h2 {
     display: flow-root;
     z-index: 0;
 }
-.imageDrink{
 
+.imageDrink{
     border: 0.2em solid #dcc8c0;
     border-radius: 8px;
     width: fit-content;
@@ -94,11 +92,12 @@ h2 {
     box-shadow: #452a0f 2px 2px 2px ;
 }
 
+/* styling image to look like a polaroid*/
 img{
     border: 0.3em inset #dcc8c0;
-    background-image: url("https://loading.io/assets/mod/spinner/spinner/lg.gif");
 }
 
+/*styling ingredient list to look like note paper*/
 ul {
     background-color: #fff;
     background-image:
@@ -110,6 +109,8 @@ ul {
     float: left;
     box-shadow: #452a0f 0px 2px 2px;
 }
+
+/*Emphasizing 'Ingredients' as note title*/
 .t{
     text-decoration:solid underline 0.1em;
     font-style: italic;
@@ -117,6 +118,8 @@ ul {
     max-width: fit-content;
     padding-top: 0;
 }
+
+/*Placing secondary background*/
 .bg{
     transition: all 1s ease-in-out;
     height: fit-content;
@@ -128,13 +131,18 @@ ul {
     left:45%;
     z-index: -2;
 }
+
+/*Emphasizing Instructions list item as title*/
 .top{
     text-decoration:underline;
     text-underline-offset: 0.2em;
     list-style-type: none;
     font-size: 1.5em;
     margin-top: 0;
-    padding: 0;}
+    padding: 0;
+}
+
+/*Accommodating element location to varied window sizes*/
 @media (max-width: 1200px) {
     body {
         margin-left: -12em;
@@ -159,7 +167,6 @@ ul {
         scale: 600%;
         top: 95%;
         left:45%;
-
     }
 }
 @media (max-width: 800px) {
@@ -185,7 +192,6 @@ ul {
         left: -5%;
     }
     .bg{
-
         scale: 300%;
     }
 }

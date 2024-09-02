@@ -2,10 +2,17 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+
         <title>Cocktail Details</title>
+
+        <!--Tab icon link--->
         <link rel="icon" href="tabIcon.png">
+
+        <!--Script and stylesheet link--->
         <script src="CocktailDetailScript.js"></script>
         <link rel="stylesheet" href="DetailsStyle.css">
+
+        <!-- Google font inserts --->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Rock+Salt&display=swap" rel="stylesheet">
@@ -13,8 +20,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+
     </head>
+
     <body>
+
         <div class = "container" id = "div">
             <div class= 'ingr'>
                 <ul id = 'ingredients' class="ingr">
@@ -28,11 +38,13 @@
                 <p id = 'instructions'> </p>
 
             </div>
-            <img class='bg' src='https://www.colorhexa.com/b5651d.png'>
-            <div class="imageDrink">
+            <img class='bg' src='https://www.colorhexa.com/b5651d.png' alt="Brown square placed behind the notepaper instructions and polaroid cocktail photo">
+            <div class="imageDrink" id = 'imageDiv'>
+                <!--Loading indicators--->
                 <h2 id="label"> Loading. . .</h2>
-                <img id="img" src="https://res.cloudinary.com/practicaldev/image/fetch/s--om38jjN_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5bvv0lq3jyg3pn50l27r.gif" style="scale: 100%"></img></div>
-
+                <img id="img" src="https://res.cloudinary.com/practicaldev/image/fetch/s--om38jjN_--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5bvv0lq3jyg3pn50l27r.gif"
+                alt="Polaroid picture with a spinning orange loading indicator circle." style="scale: 100%">
+            </div>
         </div>
 
     </body>

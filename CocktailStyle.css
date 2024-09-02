@@ -1,4 +1,4 @@
-
+/*SCROLLBAR*/
 /* width */
 ::-webkit-scrollbar {
     width: 1em;
@@ -15,6 +15,8 @@
     background: #452a0f;
     border-radius: 10px;
 }
+
+
 body {
     padding: 0;
     cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="48" viewBox="0 0 24 24"><path fill="%23E3B882FF" stroke="%23452A0FFF" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
@@ -61,6 +63,7 @@ header {
     font-weight: 500;
 
 }
+/*Load image location*/
 .load{
     scale: 90%;
     opacity: 50%;
@@ -69,6 +72,7 @@ header {
     border-style: none;
 
 }
+/*View control*/
 .container {
     width: 100%;
     max-width: 1024px;
@@ -76,6 +80,7 @@ header {
     margin: 0 auto;
 }
 
+/*Grid order the images*/
 .images {
     list-style: none;
     padding: 0.3em;
@@ -83,20 +88,18 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     grid-gap: 3em;
-
-
 }
 
 .imageTitle {
     margin: .6em 0 0;
     font-family: "Shadows Into Light", cursive;
     text-align: center;
-    transform: rotate(-5deg);
     color:black;
     font-weight: bold;
     font-size: 1.08em;
 }
 
+/*Polaroid shape styling*/
 li {
     border-radius: 4px;
     background-color: white;
@@ -106,15 +109,17 @@ li {
     max-width: fit-content;
 
 }
-
+/*Hover emphasis for easier targeting*/
 li:hover {
     opacity: 0.8;
     border: 0.5em solid rgb(213, 145, 23);
 }
+
+/*Window size accommodation*/
 @media (max-width: 1090px) {
+    /*Location fix*/
     .load{
         scale: 70%;
-
     }
 }
 @media (max-width: 1000px) {
@@ -123,6 +128,7 @@ li:hover {
         margin-left: 15%;
     }
 }
+/*Layout adjustment for mobile screen size*/
 @media (max-width: 600px) {
     body{
         margin: -2em;
